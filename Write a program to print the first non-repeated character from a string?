@@ -1,0 +1,11 @@
+def first_repeating(str1):
+    stack1=[]
+    for i in str1:
+        if i not in stack1:
+            stack1.append(i)
+        else:
+            stack1.pop()
+    return(stack1[0])
+    
+str1 = input("Enter the string")
+first_repeating(str1)
