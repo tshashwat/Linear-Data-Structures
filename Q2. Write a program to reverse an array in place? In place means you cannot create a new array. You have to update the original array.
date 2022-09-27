@@ -1,0 +1,13 @@
+def rev_array(list1):
+   length = len(list1)-1
+   
+   if le % 2 == 0:
+      for i in range(length//2):
+          list1[i],list1[length-i] = list1[length-i],list1[i]   
+   else:
+      for i in range((length//2)+1):
+          list1[i],list1[length-i] = list1[length-i],list1[i]
+        
+   return list1
+   
+   
