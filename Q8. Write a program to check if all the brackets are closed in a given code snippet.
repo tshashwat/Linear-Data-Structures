@@ -1,0 +1,27 @@
+def check_bracket(list1):
+
+      open_bracket = "{[("
+      close_bracket = "}])"
+      stack1=[]
+      dict1 = { "{" : "}",
+              "[" : "]",
+              "(" : ")"
+              }
+
+      for i in list1:
+          if i in open_bracket:
+              stack1.append(i)
+          if i in close_bracket:
+              peep_val = stack1[-1]
+          if i==dict1[peep_val]:
+              stack1.pop()
+          else: 
+              break
+      if len(stack1)==0:
+          return(True)
+      else:
+          return(False)
+    
+list1 = input("enter brackets to check")
+
+print(check_bracket(list1))
