@@ -1,0 +1,14 @@
+def postfix_to_prefix(postfix):
+    list1="+-/*"
+    stack1=[]
+    stack2=[]
+    
+    for i in postfix:
+        if i in list1:
+            stack1.append(i)
+        else:
+            stack2.append(i)
+    stack1 = stack1[::-1] + stack2
+    return ("prefix is : ",(stack1))      
+
+print(postfix_to_prefix(input("Enter a postfix expression")))
