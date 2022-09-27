@@ -1,0 +1,11 @@
+def minUsingStack(num):
+    min_num=num[0]
+    stack1=[]
+    for i in num:
+        if i<=min_num:
+            min_num = i
+            stack1.append(i)
+    return(stack1[-1])
+    
+num = list(map(int,(input("Enter numbers of list seperated by space").split())))
+print(minUsingStack(num))
