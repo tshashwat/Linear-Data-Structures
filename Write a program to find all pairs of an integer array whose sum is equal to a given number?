@@ -1,0 +1,19 @@
+def twoSum(nums, target):      ##"nums" should be list of integers. ##"target" should be the number sum of two numbers to be searched.
+     step=0
+     first=0
+     second=1
+     range=((len(nums)*len(nums))//2)
+     while step <= range:
+         if nums[len(nums)-2]+nums[len(nums)-1]==target:
+             return (len(nums)-2,len(nums)-1)
+         elif nums[first]+nums[second]==target:
+             return (first,second)
+         else:
+             if second==len(nums)-1:
+                 first=first+1
+                 second=first+1
+                 continue
+             else:
+                 second+=1   
+         step+=1
+
