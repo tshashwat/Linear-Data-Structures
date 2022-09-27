@@ -1,0 +1,17 @@
+def check_rev_string(str1,str2):
+    stack1 = []
+    new_string = ""
+    for i in range(len(str2)):
+        stack1.append(str2[i])
+        new_string = stack1[-1] + new_string
+        stack1.pop()
+    
+    if str1 == new_string:
+        return (True)
+    else:
+        return (False)
+        
+str1 = input("Enter first string")
+str2 = input("Enter rotated string")
+
+print(check_rev_string(str1,str2))
