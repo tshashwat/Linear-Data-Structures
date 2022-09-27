@@ -1,0 +1,14 @@
+def rev_using_stack(str1):
+    stack1 = []
+    new_string = ""
+
+    for i in range(len(str1)):
+        stack1.append(str1[i])
+        new_string = stack1[-1] + new_string
+        stack1.pop()
+    
+    return new_string
+    
+str1 = input("Enter the string to reverse")
+print(rev_using_stack(str1))
+
