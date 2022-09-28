@@ -1,0 +1,13 @@
+def rotation(list1,list2):
+    for i in range(len(list1)):
+        if list1==list2:
+            return(True)
+        else:
+            x=list1.pop()
+            list1.insert(0,x)
+    if list1!=list2:
+        return(False)
+        
+list1 = list(map(int,input("input numbers seperating by space").split()))
+list2 = list(map(int,input("input numbers seperating by space").split()))
+rotation(list1,list2)
