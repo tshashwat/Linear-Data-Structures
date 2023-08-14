@@ -1,15 +1,11 @@
 def tower_of_hanoi(disks, Tower_A, Tower_B, Tower_C):  
-    
     if(disks == 1):  
         print("Move disk 1 from Tower ",Tower_A," to Tower ",Tower_C)   
         return  
 
     tower_of_hanoi(disks-1, Tower_A, Tower_C, Tower_B)  
-    
     print('Move disk ",disks,"from Tower_A ",Tower_A, "to Tower " ,Tower_C)  
-    
     tower_of_hanoi(disks-1, Tower_B, Tower_A, Tower_C)  
   
-
 disks = int(input('Enter the number of disks: '))    
 tower_of_hanoi(disks, "Tower_A", "Tower_B", "Tower_C")  
